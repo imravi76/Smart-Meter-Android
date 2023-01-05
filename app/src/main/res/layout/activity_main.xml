@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/root_layout"
+    xmlns:gl="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_topbk"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/user_image"
+            app:srcCompat="@drawable/hero" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Text"
+            android:textColor="@android:color/white"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/user_image"
+            app:layout_constraintStart_toEndOf="@+id/user_image"
+            app:layout_constraintTop_toTopOf="@+id/user_image" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/profile_round"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dash"
+            style="@style/viewParent.headerText"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="90dp"
+            android:text="My Dashboard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_image" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#00000000"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/night"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="48dp"
+            android:clickable="true"
+            app:backgroundTint="#376DF6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_night"
+            tools:ignore="VectorDrawableCompat" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/temp_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <net.colindodd.gradientlayout.GradientRelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:minHeight="100dp"
+                                android:padding="10dp"
+                                gl:end_color="@color/gradientLightBlue"
+                                gl:orientation="LEFT_RIGHT"
+                                gl:start_color="@color/gradientViolet">
+
+                                <ImageView
+                                    style="@style/homeCardImage"
+                                    android:maxHeight="90dp"
+                                    android:src="@drawable/home_ic_maths" />
+
+                                <TextView
+                                    android:id="@+id/temp"
+                                    style="@style/viewParent.headerText.HomeCardTitle"
+                                    android:text="Temperature \n 26 C" />
+
+                            </net.colindodd.gradientlayout.GradientRelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/consumption_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <net.colindodd.gradientlayout.GradientRelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:minHeight="100dp"
+                                android:padding="10dp"
+                                gl:end_color="@color/gradientOrange"
+                                gl:orientation="LEFT_RIGHT"
+                                gl:start_color="@color/gradientLightYellow">
+
+                                <ImageView
+                                    style="@style/homeCardImage"
+                                    android:maxHeight="90dp"
+                                    android:src="@drawable/home_ic_chemistry" />
+
+                                <TextView
+                                    android:id="@+id/consumption"
+                                    style="@style/viewParent.headerText.HomeCardTitle"
+                                    android:text="Consumption \n 1.15 kW" />
+
+                            </net.colindodd.gradientlayout.GradientRelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/led1_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="25dp"
+                            android:text="LED 1" />
+
+                        <ToggleButton
+                            android:id="@+id/led1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:checked="true"
+                            android:text="LED 1"
+                            android:textOff="Off"
+                            android:textOn="On" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/humid_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <net.colindodd.gradientlayout.GradientRelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:minHeight="100dp"
+                                android:padding="10dp"
+                                gl:end_color="@color/gradientOrange3"
+                                gl:orientation="LEFT_RIGHT"
+                                gl:start_color="@color/gradientLightOrange2">
+
+                                <ImageView
+                                    style="@style/homeCardImage"
+                                    android:maxHeight="90dp"
+                                    android:src="@drawable/home_ic_physics" />
+
+                                <TextView
+                                    android:id="@+id/humid"
+                                    style="@style/viewParent.headerText.HomeCardTitle"
+                                    android:text="Humidity \n 58%" />
+
+                            </net.colindodd.gradientlayout.GradientRelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/bill_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <net.colindodd.gradientlayout.GradientRelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:minHeight="100dp"
+                                android:padding="10dp"
+                                gl:end_color="@color/gradientLightBlue"
+                                gl:orientation="LEFT_RIGHT"
+                                gl:start_color="@color/gradientLightGreen">
+
+                                <ImageView
+                                    style="@style/homeCardImage"
+                                    android:maxHeight="90dp"
+                                    android:src="@drawable/home_ic_biology" />
+
+                                <TextView
+                                    android:id="@+id/bill"
+                                    style="@style/viewParent.headerText.HomeCardTitle"
+                                    android:text="Bill \n Rs. 114" />
+
+
+                            </net.colindodd.gradientlayout.GradientRelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/led2_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="25dp"
+                            android:text="LED 2" />
+
+                        <ToggleButton
+                            android:id="@+id/led2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:checked="true"
+                            android:text="LED 2"
+                            android:textOff="Off"
+                            android:textOn="On" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

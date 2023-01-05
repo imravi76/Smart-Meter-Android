@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "269504484316",
+    "firebase_url": "https://future-e0a51.firebaseio.com",
+    "project_id": "future-e0a51",
+    "storage_bucket": "future-e0a51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269504484316:android:efcd1c0bc2761581",
+        "android_client_info": {
+          "package_name": "com.dei.app.arduinofirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269504484316-v1fkmmaq6i9v0pf6rdbgtg3cf43d8q11.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dei.app.arduinofirebase",
+            "certificate_hash": "8cc4fd3382d9f3267ddbe3270151dee0349b4e48"
+          }
+        },
+        {
+          "client_id": "269504484316-jhjic52uh87vicre5c2dclr744q1da14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADUrE8X1tVMZz6vCv-5RRgDoU6u7F6u4E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269504484316-jhjic52uh87vicre5c2dclr744q1da14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
